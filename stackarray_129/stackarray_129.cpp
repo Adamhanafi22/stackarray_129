@@ -10,7 +10,7 @@ private:
 public:
 	StackArray() {//construktor
 		top = -1;
-	}
+	} 
 
 
 }
