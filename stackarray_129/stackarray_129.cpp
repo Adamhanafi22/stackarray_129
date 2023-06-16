@@ -61,6 +61,10 @@ int main() {
 		cout << "\n***Stack Menu***\n";
 		cout << "1.Push\n";
 		cout << "2.Pop\n";
+		cout << "e.Display\n";
+		cout << "4.Exit\n";
+		cin >> ch;
+
 
 	}
 }
