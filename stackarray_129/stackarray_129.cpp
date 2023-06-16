@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-class StackArray{
+class StackArray {
 private:
 	int stack_array[5];
 	int top;
@@ -10,7 +10,7 @@ private:
 public:
 	StackArray() {//construktor
 		top = -1;
-	} 
+	}
 	void push() {
 		cout << "\nEnter an Element";
 		int element;
@@ -18,13 +18,13 @@ public:
 
 		if (top == 4) {
 			cout << "number of data exceeds the limit." << endl;
-				return;
+			return;
 		}
 		top++;
 		stack_array[top] = element; //step 3
 		cout << endl;
 		cout << element << "ditambahkan(pushed)" << endl;
-		
+
 	}
 	void pop() {
 		if (empty()) {//step 1
@@ -34,6 +34,21 @@ public:
 		}
 		cout << "\nThe popped element is: " << stack_array[top] << endl;	//step 2
 		top--;	//step 3 decrement
+	}
+	//method for check if data is empty
+	bool empty() {
+		return (top == -1);
+	}
+	void display() {
+		if (empty()) {
+			cout << "\nStack is empty." << endl;
+		}
+		else {
+			for (int tmp = 0; tmp <= top; tmp++) {
+				cout << stack_array[tmp] << endl;
+			}
+		}
+	}
 
 
-}
+};
